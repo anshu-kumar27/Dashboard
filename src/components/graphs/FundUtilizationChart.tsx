@@ -15,11 +15,11 @@ export const FundUtilizationChart: React.FC<FundUtilizationChartProps> = ({ util
     ];
 
     return (
-        <div className="w-[80%] h-[420px] bg-white">
-            <h3 className="text-center text-lg font-semibold mb-2">Fund Utilization Overview</h3>
+        <div className="md:w-[80%] w-[95%] h-[450px] bg-white shadow-md rounded-md">
+            <h3 className="text-center text-lg font-semibold p-4">Fund Utilization Overview</h3>
 
              {/* Custom legend top-right */}
-            <div className="absolute top-4 right-4 bg-white rounded shadow px-3 py-2 text-sm">
+            <div className="absolute bg-white rounded shadow px-3 py-2 text-sm" style={{ transform: "translate(20px, 22em)" }}> 
                 {data.map((entry, index) => (
                     <div key={entry.name} className="flex items-center gap-2 mb-1 last:mb-0">
                         <div
@@ -36,8 +36,8 @@ export const FundUtilizationChart: React.FC<FundUtilizationChartProps> = ({ util
                     <Pie
                         data={data}
                         cx="50%"
-                        cy="50%"
-                        outerRadius={150}
+                        cy="40%"
+                        outerRadius={125}
                         innerRadius={0}
                         fill="#8884d8"
                         paddingAngle={1}
