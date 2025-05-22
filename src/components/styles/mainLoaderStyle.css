@@ -15,14 +15,14 @@
     transform: translate(-50%, -50%);
     width: 48em;
     height: 48em;
-    background-image: radial-gradient(circle 10px, #00d9ff 100%, transparent 0),
-        radial-gradient(circle 10px, #00d9ff 100%, transparent 0),
-        radial-gradient(circle 10px, #00d9ff 100%, transparent 0),
-        radial-gradient(circle 10px, #00d9ff 100%, transparent 0),
-        radial-gradient(circle 10px, #00d9ff 100%, transparent 0),
-        radial-gradient(circle 10px, #00d9ff 100%, transparent 0),
-        radial-gradient(circle 10px, #00d9ff 100%, transparent 0),
-        radial-gradient(circle 10px, #00d9ff 100%, transparent 0);
+    background-image: radial-gradient(circle 10px, #178d2c 100%, transparent 0),
+        radial-gradient(circle 10px, #178d2c 100%, transparent 0),
+        radial-gradient(circle 10px, #178d2c 100%, transparent 0),
+        radial-gradient(circle 10px, #178d2c 100%, transparent 0),
+        radial-gradient(circle 10px, #178d2c 100%, transparent 0),
+        radial-gradient(circle 10px, #178d2c 100%, transparent 0),
+        radial-gradient(circle 10px, #178d2c 100%, transparent 0),
+        radial-gradient(circle 10px, #178d2c 100%, transparent 0);
     background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em,
         13em -13em, -13em -13em, 13em 13em, -13em 13em;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .loader::after {
     font-size: 1px;
-    background: #00d9ff;
+    background: #178d2c;
     animation: bounce 1s ease-in infinite;
 }
 
