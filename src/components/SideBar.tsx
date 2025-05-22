@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
   Home,
@@ -7,9 +7,8 @@ import {
   LifeBuoy,
   Settings,
   FileText,
-  Menu,
+  Hospital,
 } from "lucide-react";
-import MobileSidebar from "./MobileSideBar";
 
 export interface SidebarItem {
   label: string;
@@ -29,22 +28,19 @@ export const sidebarItems: SidebarItem[] = [
 const SideBar: React.FC = () => {
   const [activeItem, setActiveItem] = useState("Dashboard");
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <>
       <aside className="hidden fixed md:flex flex-col h-screen bg-white p-6 space-y-1 border-r border-base-300 flex-1 w-1/6">
-        <div className="flex justify-center gap-2 mb-auto">
-          {[...Array(3)].map((_, idx) => (
-            <span
-              key={idx}
-              className="block w-3 h-3 rounded-full bg-green-700"
-            />
-          ))}
+        <div className="flex justify-center gap-2 mb-auto flex-col items-center">
+          <div className="p-2 bg-green-300 rounded-full"><Hospital className="w-8 h-8"/></div>
+          <h1 className="text-2xl font-bold text-gray-800 text-center">General Hospital</h1>
         </div>
 
         <div className="flex flex-col gap-1 mt-auto">
           {sidebarItems.map(({ label, icon: Icon, path }) => {
-            const isActive = label === activeItem;
+            const isActive = location.pathname == path;
 
             return (
               <div

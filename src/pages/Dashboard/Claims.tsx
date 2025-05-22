@@ -56,7 +56,7 @@ const Claims: React.FC<ClaimData> = ({ claims_data }) => {
                             <button
                                 key={status}
                                 onClick={() => setFilter(status as typeof filter)}
-                                className={`flex-1 px-4 py-2 rounded-md text-center transition-all duration-200 ${baseColor} ${fontWeight} ${ring}`}
+                                className={`flex-1 px-4 py-2 rounded-md text-center transition-all duration-200 cursor-pointer ${baseColor} ${fontWeight} ${ring}`}
                             >
                                 {status}
                             </button>
