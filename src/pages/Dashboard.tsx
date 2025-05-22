@@ -14,13 +14,12 @@ const Dashboard: React.FC = () => {
 
     return (
         <>
-
-            <div className="p-6 space-y-2">
-                <div className="flex items-center space-x-3 justify-center md:justify-start">
+            <div className="p-6 space-y-2 md:pr-8">
+                <div className="flex items-center space-x-3 justify-center md:justify-start md:ml-2">
                     <LayoutDashboard className="text-green-600 w-6 h-6" />
                     <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
                 </div>
-                <div className="flex justify-center md:justify-start md:mb-6 mb-8">
+                <div className="flex justify-center md:justify-start md:mb-6 mb-8 md:ml-2">
                     <p className="text-sm text-gray-600">
                         Welcome to the dashboard of{" "}
                         <span className="font-medium text-gray-800">
@@ -28,7 +27,7 @@ const Dashboard: React.FC = () => {
                         </span>
                     </p>
                 </div>
-                <div className="md:flex-row flex flex-col">
+                <div className="md:flex-row flex flex-col md:ml-2">
                     <div className="md:w-1/4 w-full md:mb-0 mb-4">
                         <AllCards />
                     </div>

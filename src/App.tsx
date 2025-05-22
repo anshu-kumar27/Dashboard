@@ -1,5 +1,5 @@
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import HospitalData from './services/HospitalData'; // 👈 import here
+import HospitalData from './services/HospitalData';
 import Dashboard from './pages/Dashboard';
 import Redirection from './pages/Redirection';
 import MainLoader from './components/MainLoader';
@@ -14,15 +14,15 @@ function App() {
     navigate('/dashboard')
   },[])
   return (
-    <div className='flex flex-1 flex-row bg-base-200'>
+    <div className='flex flex-row bg-base-200'>
       <HospitalData />
 
       {loading ? (
         <MainLoader />
       ) : (
         <>
-          <div className="h-[100vh] flex-1 w-1/6"><SideBar /></div>
-          <div className='md:w-5/6 w-[100%]'>
+          <div className="h-[100vh] md:block md:w-1/5"><SideBar /></div>
+          <div className='md:w-4/5 p-2 flex-1 md:ml-6 mt-10 md:mt-0'>
             <Routes>
               <Route path='/dashboard' element={<Dashboard />} />
               <Route path='/*' element={<Redirection />} />
