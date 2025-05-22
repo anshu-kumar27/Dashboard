@@ -28,13 +28,11 @@ export const sidebarItems: SidebarItem[] = [
 
 const SideBar: React.FC = () => {
   const [activeItem, setActiveItem] = useState("Dashboard");
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <aside className="hidden md:flex flex-col h-screen bg-white p-6 space-y-1 border-r border-base-300">
+      <aside className="hidden fixed md:flex flex-col h-screen bg-white p-6 space-y-1 border-r border-base-300 flex-1 w-1/6">
         <div className="flex justify-center gap-2 mb-auto">
           {[...Array(3)].map((_, idx) => (
             <span

@@ -37,9 +37,11 @@ const Claims: React.FC<ClaimData> = ({ claims_data }) => {
             : claimArray.filter((claim) => claim.claim_status === filter);
 
     return (
-        <div className="flex flex-col items-center justify-start w-[95%] md:w-[80%] h-[450px] p-0 gap-0 bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="w-full bg-base-200 shadow-md p-4">
-                <h1>Claims</h1>
+        // w-[97%] md:h-[420px] h-[300px] bg-white py-4 rounded shadow-md mt-4
+        <div className=" flex flex-col items-center justify-start w-[97%] md:h-[420px] h-[500px]  bg-white rounded shadow-md md:mt-4 mt-10 overflow-hidden">
+            <div className="w-full bg-white p-4">
+                    <h3 className="text-center text-sm md:text-lg font-semibold mb-6">Claims History</h3>
+
                 <div className="flex justify-between gap-4 w-full">
                     {["All", "Paid", "Pending"].map((status) => {
                         const isActive = filter === status;
@@ -64,8 +66,7 @@ const Claims: React.FC<ClaimData> = ({ claims_data }) => {
                 </div>
             </div>
 
-            {/* details of claims  */}
-            <div className="flex flex-col w-full gap-3 overflow-y-auto px-6 md:py-12 py-6 items-center">
+            <div className="flex flex-col w-full gap-3 overflow-y-auto px-6 md:py-2 mb-6 mt-4 py-4 items-center">
                 {filteredClaims.map((claim) => (
                     <ClaimDetailsComponent key={claim.claim_id} claim={claim} />
                 ))}

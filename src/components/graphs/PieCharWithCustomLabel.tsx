@@ -9,7 +9,6 @@ import {
 } from "recharts";
 
 interface PieChartProps {
-  totalLimit: number;
   utilised: number;
   unutilised: number;
 }
@@ -17,7 +16,6 @@ interface PieChartProps {
 const COLORS = ["#EF4444", "#22C55E"]; // Red for used, Green for available
 
 const PieChartWithCustomizedLabel: React.FC<PieChartProps> = ({
-  totalLimit,
   utilised,
   unutilised,
 }) => {
