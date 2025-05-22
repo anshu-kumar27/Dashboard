@@ -9,7 +9,7 @@ interface UpcomingRepaymentProps {
 
 const UpcomingRepayment: React.FC<UpcomingRepaymentProps> = ({ upcomingDate, amountDue }) => {
     return (
-        <div className="w-[97%] bg-yellow-100 rounded-lg p-4 flex items-center gap-4 shadow-sm">
+        <div className="w-[97%] bg-yellow-100 rounded-lg p-4 flex items-center gap-4 shadow-sm hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
             <div className="p-2 bg-yellow-300 rounded-full">
                 <CalendarDays className="h-6 w-6 text-yellow-800" />
             </div>

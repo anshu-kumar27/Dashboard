@@ -5,7 +5,7 @@ import { useHospitalContext } from "../../context/HospitalContext";
 const formatINR = (amount: number) => `₹${amount.toLocaleString("en-IN")}`;
 
 const DetailItem = ({ label, value }: { label: string; value: string }) => (
-  <div className="bg-white rounded-lg px-4 py-2 flex flex-col items-start shadow-md w-[47%]">
+  <div className="bg-white rounded-lg px-4 py-2 flex flex-col items-start shadow-md w-[47%] hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
     <p className="text-xs text-gray-500">{label}</p>
     <p className="text-sm font-semibold text-gray-800">{value}</p>
   </div>

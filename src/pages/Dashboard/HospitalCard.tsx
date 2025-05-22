@@ -4,7 +4,7 @@ import { Hospital } from "lucide-react";
 function HospitalCard() {
     const {data} = useHospitalContext()
   return (
-    <div className="w-[97%] bg-white rounded-lg p-4 flex items-center gap-4 shadow-sm h-[4.8rem]">
+    <div className="w-[97%] bg-white rounded-lg p-4 flex items-center gap-4 shadow-sm h-[4.8rem] hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
             <div className="p-2 bg-green-300 rounded-full"><Hospital/>
             </div>
             <div className="flex flex-col">
